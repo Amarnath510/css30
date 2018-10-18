@@ -19,7 +19,7 @@
 	background-color: #4267b2;
 	border: 1px solid #4267b2;
 	color: white;
-	text-shadow: 0 2px 0 0 #3359a5;	
+	text-shadow: 0 2px 0 0 #3359a5;
 
 	/* Shadow */
 	-moz-box-shadow: inset 0 1px 0 0 #4d73bf;
@@ -131,8 +131,8 @@
 	border-radius: 100%;
 	outline: none;
 
-	/* 
-		Shadow effect (increasing from ligh to low) 
+	/*
+		Shadow effect (increasing from ligh to low)
 		To check this effect zoom it.
 	*/
 	box-shadow: 0 1px hsl(54, 100%, 20%),
@@ -180,12 +180,227 @@
 	================== */
 
 .gradient-button-1 {
-	padding: 2rem 4rem;
+	padding: 1rem 3rem;
 	font-size: 1.4rem;
 	background-color: #e7eef1;
+	box-sizing: border-box;
 
-	/* Border using gradient */
 	/* border-image: is introduced in CSS3 */
 	border: solid 10px transparent;
 	border-image: linear-gradient(to top right, orangered, yellow);
+	border-image-slice: 1;
+
+	color: orangered;
+	transition: all 0.3s ease-in-out;
+}
+
+.gradient-button-1:hover {
+	background-image: linear-gradient(to top right, orangered, yellow);
+	color: white;
+}
+
+.gradient-button-2 {
+	display: inline-block;
+	padding: 1.2rem 2.5rem;
+	font-size: 1.4rem;
+	background-color: #e7eef1;
+	box-sizing: border-box;
+
+	border: solid 4px transparent;
+	border-image: linear-gradient(to right, orangered, transparent);
+	border-image-slice: 1;
+
+	color: orangered;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.gradient-button-2:hover {
+	border-right-style: none;
+	background-image: linear-gradient(to right, orangered, transparent);
+	color: white;
+}
+
+
+/* ==================
+	Animated Buttons
+	================== */
+
+.animated-button-1 {
+	position: relative;
+	display: inline-block;
+	font-size: 1.4rem;
+	color: white;
+	padding: 1.2rem 3rem;
+	border: solid 1px black;
+	background-image: url(pattern.png);
+	background-size: 40px 40px;
+	transition: all ease 0.3s;
+}
+
+.animated-button-1:hover {
+	animation: loading-button-animation 2s linear infinite;
+}
+
+@keyframes loading-button-animation {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 40px 0; /* You need to add background size for "to" */
+	}
+}
+
+.animated-button-2 {
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 1.4rem;
+	color: white;
+	background-color: #00b3b4;
+	border: solid 1px black;
+	transition: all ease 0.3s;
+}
+
+.animated-button-2::after {
+	position: absolute;
+	content: "»"; /* Copied this arrow symbol from final.css */
+	top: 30%;
+	right: 0.6em;
+	transition: all ease 0.3s;
+
+	opacity: 0; /* Hide initially */
+}
+
+/* Reduce the left and right padding from original 40 to 20 so that it slowly moves towards left */
+.animated-button-2:hover {
+	padding: 20px 60px 20px 20px;
+}
+
+.animated-button-2:hover::after {
+	right: 1.2em;
+	opacity: 1;
+}
+
+
+/* ====================================
+			Toggle Switch UI Buttons
+	==================================== */
+.toggle-1 {
+	position: relative;
+	display: inline-block;
+	margin: 0 15px 0 0;
+	vertical-align: top;
+}
+
+.toggle-1__input {
+	display: none; /* Checkbox is hidden not disabled. CSS can check whether checkbox is enabeld or not */
+}
+
+.toggle-1__button {
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	background-color: orangered;
+	font-size: 1rem;
+	line-height: 20px;
+	color: white;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	text-transform: uppercase;
+	border: solid 1px orangered;
+}
+
+/* .toggle-1__button::before {
+	position: absolute;
+	display: inline-block;
+	content: "on";
+	top: 20%;
+	left: 10%;
+	color: #00b3b4;
+	padding: 1px;
+	background-color: white;
+	transition: all 0.3s ease;
+	opacity: 0;
+} */
+
+
+.toggle-1__button::before {
+	position: absolute;
+	display: inline-block;
+	content: "off";
+	top: 20%;
+	left: 50%;
+	color: orangered;
+	background-color: white;
+	padding: 0 3px;
+	transition: all 0.3s ease;
+}
+
+
+/* Get first whether checked or not. If checked then access the button which is sibling of it */
+.toggle-1__input:checked + .toggle-1__button {
+	background-color: #00b3b4;
+	border: solid 1px #00b3b4;
+}
+
+.toggle-1__input:checked + .toggle-1__button::before {
+	left: 10%;
+	content: "on";
+	color: #00b3b4;
+	transition: all 0.3s ease;
+}
+
+
+
+.toggle-2 {
+	display: inline-block;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.toggle-2__input {
+	display: none;
+}
+
+.toggle-2__button {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 25px;
+	line-height: 20px;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #CCC;
+	font-size: 1rem;
+	transition: all 0.4s ease;
+}
+
+.toggle-2__button::before {
+	position: absolute;
+	display: inline-block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #CCC;
+	top: 30%;
+	left: 8px;
+	border-radius: 100%; /* to make the box to circle */
+	transition: all 0.4s ease;
+}
+
+.toggle-2__input:checked + .toggle-2__button {
+	background-color: #00b3b4;
+	color: white;
+	transition: all 0.4s ease;
+	border: 1px solid #00b3b4;
+}
+
+
+.toggle-2__input:checked + .toggle-2__button::before {
+	background-color: white;
 }
