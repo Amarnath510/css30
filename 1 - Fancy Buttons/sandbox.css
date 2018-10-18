@@ -1,0 +1,191 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+
+/* ==================
+	Facebook Style
+	================== */
+
+.facebook-style-btn {
+	padding: 6px 12px;
+	font-size: 0.9rem;
+	border-radius: 2px;
+}
+
+.facebook-style-dark {
+	background-color: #4267b2;
+	border: 1px solid #4267b2;
+	color: white;
+	text-shadow: 0 2px 0 0 #3359a5;	
+
+	/* Shadow */
+	-moz-box-shadow: inset 0 1px 0 0 #4d73bf;
+	-webkit-box-shadow: inset 0 1px 0 0 #4d73bf;
+	box-shadow: inset 0 1px 0 0 #4d73bf;
+}
+
+.facebook-style-dark:hover {
+	background-color: #2b54a7;
+}
+
+.facebook-style-dark:active {
+	background: #1d4698;
+	border-color: #1d4698;
+}
+
+.facebook-style-light {
+	background: #f6f7f9;
+	border: 1px solid #ced0d4;
+	color: #4b4f56;
+}
+
+.facebook-style-light:hover {
+	background: #efebee;
+}
+
+.facebook-style-light:active {
+	background: #d8dade;
+	border-color: #d8dade;
+}
+
+/* ==================
+	3D Buttons
+	================== */
+
+.btn-3d-1 {
+	position: relative; /* so that we can use top/left */
+	color: white;
+	background: orangered;
+	padding: 15px 24px;
+	border: none;
+	font-size: 1.4rem;
+	outline: none;
+
+	/* Shadow */
+	-moz-box-shadow: -6px 6px 0 0 orangered;
+	-webkit-box-shadow: -6px 6px 0 0 orangered;
+	box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+}
+
+.btn-3d-1:hover {
+	background: hsl(16, 100%, 45%);
+}
+
+.btn-3d-1:active {
+	background: hsl(16, 100%, 50%);
+	top: 3px;
+	left: -3px;
+	box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+	border: none;
+}
+
+.btn-3d-1::before {
+	position: absolute; /* so that it is relative to its parent */
+	display: block;
+	content: "";
+	height: 0;
+	width: 0;
+
+	/* Create triangle which fits on the top left */
+	border: solid 6px transparent; /* border needs to be the size of the shadow. */
+	border-right: solid 6px hsl(16, 100%, 30%);
+	border-left-width: 0;
+	top: 0;
+	left: -6px;
+}
+
+.btn-3d-1::after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 0;
+	width: 0;
+
+	/* Create triangle which fits on the bottom right */
+	border: solid 6px transparent;
+	border-top: solid 6px hsl(16, 100%, 30%);
+	border-bottom-width: 0;
+	right: 0;
+	bottom: -6px;
+}
+
+
+/* ==================
+	3D Buttons - Button 2
+	================== */
+
+
+.btn-3d-2 {
+	position: relative; /* Used when we click the button */
+	font-size: 1.4rem;
+	color: white;
+	text-shadow: 0 -1px #c3af07;
+	border: solid 1px hsl(54, 100%, 20%);
+
+	/* For circle */
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	outline: none;
+
+	/* 
+		Shadow effect (increasing from ligh to low) 
+		To check this effect zoom it.
+	*/
+	box-shadow: 0 1px hsl(54, 100%, 20%),
+				0 2px hsl(54, 100%, 18%),
+				0 3px hsl(54, 100%, 17%),
+				0 4px hsl(54, 100%, 16%),
+				0 5px hsl(54, 100%, 15%),
+				0 6px hsl(54, 100%, 14%),
+				0 7px hsl(54, 100%, 13%),
+				0 8px hsl(54, 100%, 12%),
+				0 9px hsl(54, 100%, 11%);
+
+
+	background: #ecd300;
+	background: -webkit-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+	background: -moz-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+	background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+}
+
+.btn-3d-2:hover {
+	background: -webkit-radial-gradient(hsl(54, 100%, 40%), hsl(54, 100%, 35%));
+	background: -moz-radial-gradient(hsl(54, 100%, 40%), hsl(54, 100%, 35%));
+	background: radial-gradient(hsl(54, 100%, 40%), hsl(54, 100%, 35%));
+}
+
+.btn-3d-2:active {
+	background: -webkit-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%));
+	background: -moz-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%));
+	background: radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%));
+
+	/* Need to have postion as relative to the class so that we can use top/bottom */
+	top: 3px;
+
+	box-shadow: 0 1px hsl(54, 100%, 20%),
+				0 2px hsl(54, 100%, 18%),
+				0 3px hsl(54, 100%, 17%),
+				0 4px hsl(54, 100%, 16%),
+				0 5px hsl(54, 100%, 15%),
+				0 6px hsl(54, 100%, 14%),
+				0 7px hsl(54, 100%, 13%); /* Copied same property from and remove the last two shadows */
+}
+
+/* ==================
+	Gradient Bordered Buttons
+	================== */
+
+.gradient-button-1 {
+	padding: 2rem 4rem;
+	font-size: 1.4rem;
+	background-color: #e7eef1;
+
+	/* Border using gradient */
+	/* border-image: is introduced in CSS3 */
+	border: solid 10px transparent;
+	border-image: linear-gradient(to top right, orangered, yellow);
+}
