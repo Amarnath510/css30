@@ -9,6 +9,7 @@ https://codecollege.ca
 ## Progress
 - Day-1: Awesome buttons
 - Day-2: Nice text shadows
+- Day-3: Cool shapes using Clip-Path
 
 
 ## Reference
