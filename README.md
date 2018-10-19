@@ -7,3 +7,4 @@ https://codecollege.ca
 
 ## Progress
 - Day-1: Awesome buttons
+- Day-2: Nice text shadows
