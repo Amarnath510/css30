@@ -40,4 +40,7 @@ https://codecollege.ca
 
 
 ## Reference
-- https://bennettfeely.com/clippy/
+- https://bennettfeely.com/clippy/  (To shape images)
+- https://stripesgenerator.com/     (To generate gradients with stripes)
+- https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale (About Transform-Scale)
+- https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate (About Transform-Translate)
