@@ -10,7 +10,7 @@ https://codecollege.ca
 - [x] Day-1: Awesome buttons
 - [x] Day-2: Nice text shadows
 - [x] Day-3: Cool shapes using Clip-Path
-- [ ] Day-4:
+- [x] Day-4: Registration form
 - [ ] Day-5:
 - [ ] Day-6:
 - [ ] Day-7:

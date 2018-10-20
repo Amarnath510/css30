@@ -3,3 +3,139 @@
     CODE YOUR STYLES BELOW!
 
    ====================================== */
+
+.register-wrapper {
+  position: relative;
+  padding: 100px;
+  color: #999;
+  background-image: -webkit-linear-gradient(135deg, #0eeff0, #088f90);
+  background-image: -o-linear-gradient(135deg, #0eeff0, #088f90);
+  background-image: linear-gradient(135deg , #0eeff0, #088f90);
+}
+
+.register-block * {
+  box-sizing: border-box;
+}
+
+/* Make input box elements sexy */
+.register-wrapper form input {
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #e6e6e6;
+  border-bottom-width: 3px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+
+/* Except for the last input add margin-bottom to remaining */
+.register-wrapper form input:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+
+/* Add border when active or focus for email and password textboxes */
+.register-wrapper form input[type="email"]:focus,
+.register-wrapper form input[type="email"]:active,
+.register-wrapper form input[type="password"]:focus,
+.register-wrapper form input[type="password"]:active {
+  border-color: rgb(190, 220, 237);
+}
+
+.register-wrapper form input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #f2395a;
+  border-bottom-width: thick;
+  background: #f2395a;
+  color: white;
+  border-radius: 5px;
+  background-size: 20px 20px; /* Background size strip size which effects linear gradient */
+  cursor: pointer;
+
+  background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.15) 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0)
+  );
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0)
+  );
+  transition: all 0.3s ease;
+}
+
+
+.register-wrapper form input[type="submit"]:hover {
+  background-size: 40px 40px;
+  transition: all 0.3s ease;
+}
+
+/* "Create an Account" header */
+.register-title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: dashed 1px #CCC;
+}
+
+/* Add background to the whole form */
+.register-block {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  background: white;
+  padding: 0.7rem 2rem 2rem 2rem;
+  border-radius: 5px;
+}
+
+/* Add hover effect for the register-block */
+.register-block:before,
+.register-block:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.9) translate(0, 0);
+          transform: scale(0.9) translate(0, 0);
+  transition: all 0.3s ease;
+}
+
+.register-block:hover::before {
+  -webkit-transform: scale(0.96) translate(0, 16px);
+          transform: scale(0.96) translate(0, 16px);
+  z-index: -1;
+}
+
+/* .register-block:hover::after {
+  -webkit-transform: scale(0.92) translate(0, 32px);
+          transform: scale(0.92) translate(0, 32px);
+  z-index: -2;
+} */
