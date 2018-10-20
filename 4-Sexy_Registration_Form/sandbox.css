@@ -8,6 +8,7 @@
   position: relative;
   padding: 100px;
   color: #999;
+  z-index: 3; /* IMP: This should be at the top else register-block hover effect will not be triggered */
   background-image: -webkit-linear-gradient(135deg, #0eeff0, #088f90);
   background-image: -o-linear-gradient(135deg, #0eeff0, #088f90);
   background-image: linear-gradient(135deg , #0eeff0, #088f90);
@@ -105,6 +106,7 @@
   background: white;
   padding: 0.7rem 2rem 2rem 2rem;
   border-radius: 5px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 /* Add hover effect for the register-block */
@@ -129,13 +131,13 @@
 }
 
 .register-block:hover::before {
+  z-index: -1;
   -webkit-transform: scale(0.96) translate(0, 16px);
           transform: scale(0.96) translate(0, 16px);
-  z-index: -1;
 }
 
-/* .register-block:hover::after {
+.register-block:hover::after {
+  z-index: -2;
   -webkit-transform: scale(0.92) translate(0, 32px);
           transform: scale(0.92) translate(0, 32px);
-  z-index: -2;
-} */
+}
