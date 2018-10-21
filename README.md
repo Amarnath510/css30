@@ -11,7 +11,7 @@ https://codecollege.ca
 - [x] Day-2: Nice text shadows
 - [x] Day-3: Cool shapes using Clip-Path
 - [x] Day-4: Registration form
-- [ ] Day-5:
+- [x] Day-5: Broken Images
 - [ ] Day-6:
 - [ ] Day-7:
 - [ ] Day-8:
