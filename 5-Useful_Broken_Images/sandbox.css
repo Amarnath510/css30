@@ -1,0 +1,40 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.image {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+
+/*
+   Question: How does this work if the src image is present?
+   => If image is loaded successfully then it will be on top of it.
+ */
+.image::after {
+  position: absolute;
+  display: inherit; /* Will get same as parent that is "inline-block" */
+  content: attr(alt) " not found";
+  text-align: center;
+  min-width: 200px;  /* IMP: Else it will slide down to next line as original image width is less because of it unavailability. */
+  padding: 10px 5px 10px 30px;
+  background: #f0f0f0;
+  border: 1px dashed #888;
+  top: 0;
+  left: 0;
+
+  /*
+      Now set image
+      Super cool stuff
+  */
+  background-image: url(./noimage.png);
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: 15px 10px;
+}
