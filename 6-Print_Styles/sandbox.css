@@ -1,0 +1,149 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+
+/* NOTE: Before you start,
+    => cmd + p
+    => More setting (on left)
+    => Options
+    => Enable "Background Graphics"
+ */
+@media print {
+  /* Remove all that are not necessary to print */
+
+  /* Remive: Logo */
+  .logo {
+    display: none;
+  }
+
+  /* Remove: Inspect and get the classes and pseudo elements for 3d effect */
+  /* Inspect and remove properties and do paste them here */
+  .sandbox,
+  .final-result,
+  .info {
+    box-shadow: none;
+  }
+
+  .sandbox::before,
+  .sandbox::after,
+  .final-result::before,
+  .final-result::after,
+  .info::before,
+  .info::after,
+  .final-result h2,
+  .info h2 {
+    display: none;
+  }
+
+  /* Remove: images */
+  img {
+    display: none;
+  }
+
+  /* RESET GLOBAL TYPOGRAPHY */
+  /* On paper font is usually "serif" */
+  body {
+    font-family: Georgia, serif;
+    font-size: 15pt; /* pt is paper font measurements */
+    line-height: 24pt;
+    background: none;
+    color: #000; /* Font is black */
+  }
+
+  /* BODY BACGROUND RESET */
+  body::before,
+  body::after {
+    background: none;
+    display: none;
+  }
+
+  /* RESET LAYOUT */
+  .sandbox,
+  .final-result,
+  .info,
+  section,
+  footer,
+  footer {
+    background: none;
+    width: 100%; /* We have different width for above properties. Reset all to 100% */
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #000;
+  }
+
+  /* RESET section */
+  section * {
+    margin: 0;
+    padding: 0;
+  }
+
+  section::before,
+  section::after {
+    display: none;
+  }
+
+  /* Finally reset all SPECIFICS */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 20pt;
+    line-height: 30pt;
+  }
+
+  h1 {
+    font-size: 24pt;
+    color: #888; /* Little lighter than black */
+    margin: 0 0 20pt;
+    text-align: center;
+    width: 100%;
+    transform: rotate(0);
+    text-shadow: none;
+  }
+
+  h1 small {
+    font-size: 20pt;
+    color: #000;
+    transform: rotate(0);
+  }
+
+  a:link {
+    border-bottom: none;
+  }
+
+  /* show url after the link */
+  a::after {
+    content: " [" attr(href) "]";
+  }
+
+  footer a:link,
+  footer a:visited {
+    color: #000;
+    background: none;
+  }
+
+  /* RESET FOOTER */
+  footer .made-by,
+  footer .course,
+  footer .copyright {
+    padding: 0;
+  }
+
+  .info p {
+    color: #000;
+  }
+}
+
+
+/* ========================================
+
+    Finally when you do,
+      => print
+      => more settings(on left)
+      => Check and un-check Background Graphics
+      => Result should be same even when we check/uncheck above
+   ====================================== */

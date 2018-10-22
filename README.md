@@ -12,7 +12,7 @@ https://codecollege.ca
 - [x] Day-3: Cool shapes using Clip-Path
 - [x] Day-4: Registration form
 - [x] Day-5: Broken Images
-- [ ] Day-6:
+- [x] Day-6: Print Styling
 - [ ] Day-7:
 - [ ] Day-8:
 - [ ] Day-9:
