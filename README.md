@@ -13,7 +13,7 @@ https://codecollege.ca
 - [x] Day-4: Registration form
 - [x] Day-5: Broken Images
 - [x] Day-6: Print Styling
-- [ ] Day-7:
+- [x] Day-7: Image Manipulation
 - [ ] Day-8:
 - [ ] Day-9:
 - [ ] Day-10:
@@ -44,3 +44,4 @@ https://codecollege.ca
 - https://stripesgenerator.com/     (To generate gradients with stripes)
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale (About Transform-Scale)
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate (About Transform-Translate)
+- https://www.w3schools.com/cssref/playit.asp?filename=playcss_filter&preval=none
