@@ -14,7 +14,7 @@ https://codecollege.ca
 - [x] Day-5: Broken Images
 - [x] Day-6: Print Styling
 - [x] Day-7: Image Manipulation
-- [ ] Day-8:
+- [x] Day-8: Bit Mario
 - [ ] Day-9:
 - [ ] Day-10:
 - [ ] Day-11:
