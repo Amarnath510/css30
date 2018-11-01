@@ -15,7 +15,7 @@ https://codecollege.ca
 - [x] Day-6: Print Styling
 - [x] Day-7: Image Manipulation
 - [x] Day-8: Bit Mario
-- [ ] Day-9:
+- [x] Day-9: Modern Layouts (using floats not Flexbox)
 - [ ] Day-10:
 - [ ] Day-11:
 - [ ] Day-12:

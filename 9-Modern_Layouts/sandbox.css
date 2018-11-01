@@ -1,0 +1,112 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+
+/* ========================================
+   Layout 1
+  ====================================== */
+.layout1 article {
+  width: 58%;
+  float: left;
+}
+
+.layout1 aside {
+  width: 40%;
+  float: right;
+}
+
+.layout1 footer {
+  clear: both;
+}
+
+
+
+/* ========================================
+   Layout 2
+  ====================================== */
+.layout2 .logo {
+  width: 28%;
+  float: left;
+  margin: 0;
+}
+
+.layout2 nav {
+  width: 70%;
+  float: right;
+  margin: 0;
+}
+
+/*
+  Now we have a problem with header collapse.
+  This does not fix with just clear property
+ */
+ .layout2 header::after {
+   display: table;
+   content: "";
+   clear: both;
+ }
+
+.layout2 .sidenav {
+  width: 23%;
+  float: left;
+  margin-right: 2%;
+}
+
+.layout2 article {
+  width: 50%;
+  float: left;
+  margin-right: 2%;
+}
+
+.layout2 .sidebar {
+  width: 23%;
+  float: right;
+}
+
+.layout2 footer {
+  clear: both;
+}
+
+
+/* ========================================
+   Layout 3
+  ====================================== */
+.layout3 .logo {
+  width: 28%;
+  float: right;
+  margin: 0;
+}
+
+.layout3 nav {
+  width: 70%;
+  float: left;
+  margin: 0;
+}
+
+.layout3 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.layout3 article {
+  width: 32%;
+  float: left;
+}
+
+.layout3 article:not(:last-child) {
+  margin-right: 2%;
+}
+
+.layout3 .articles::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.layout3 footer {
+  clear: both;
+}
