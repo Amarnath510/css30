@@ -18,7 +18,7 @@ https://codecollege.ca
 - [x] Day-9: Modern Layouts (using floats not Flexbox)
 - [x] Day-10: Pricing Table
 - [x] Day-11: IE Hacks
-- [ ] Day-12:
+- [x] Day-12: CSS Variables
 - [ ] Day-13:
 - [ ] Day-14:
 - [ ] Day-15:
