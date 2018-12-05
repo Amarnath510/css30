@@ -16,8 +16,8 @@ https://codecollege.ca
 - [x] Day-7: Image Manipulation
 - [x] Day-8: Bit Mario
 - [x] Day-9: Modern Layouts (using floats not Flexbox)
-- [ ] Day-10:
-- [ ] Day-11:
+- [x] Day-10: Pricing Table
+- [x] Day-11: IE Hacks
 - [ ] Day-12:
 - [ ] Day-13:
 - [ ] Day-14:
