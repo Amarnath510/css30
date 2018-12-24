@@ -19,9 +19,9 @@ https://codecollege.ca
 - [x] Day-10: Pricing Table
 - [x] Day-11: IE Hacks
 - [x] Day-12: CSS Variables
-- [ ] Day-13:
-- [ ] Day-14:
-- [ ] Day-15:
+- [x] Day-13: Sticky Footer
+- [x] Day-14: Sticky Header
+- [x] Day-15: Sticky Sidebar
 - [ ] Day-16:
 - [ ] Day-17:
 - [ ] Day-18:
