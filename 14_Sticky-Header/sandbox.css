@@ -1,0 +1,30 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.sticky-header-lesson {
+  margin-top: 200px;  /* This should be more than our header height so that main content won't be close to header */
+}
+
+.sticky-header {
+  position: fixed; /* To fix the div */
+  top: 0; /* To be at the top. This works only if position is fixed */
+  background: rgba(242, 57, 90, 0.9);
+
+  width: 100%; /* Occupies entire row */
+  height: 170px; /* Actual height of the header */
+  z-index: 99; /* To be at the top */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-header h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0 auto;
+}
+
+.sticky-header small {
+  font-size: 2rem;
+}

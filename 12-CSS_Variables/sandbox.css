@@ -5,7 +5,7 @@
    ====================================== */
 
 .sandbox {
-  --primary-color: orangered;
+  --primary-color: orangered; /* css variable declaration. We declare using -- */
   --secondary-color: hotpink;
   --base-measurement: 20px;
 }
@@ -14,15 +14,16 @@
   text-align: center;
   --text-color: #f3f3f3;
 
-  color:      var(--text-color);
+  color:      var(--text-color);  /* We use it using var method */
   background: var(--primary-color);
   margin:     var(--base-measurement);
 
-  width: calc( var(--base-measurement) * 10);
+  width: calc( var(--base-measurement) * 10); /* Computations can also be done using calc method */
   height: calc( var(--base-measurement) * 10);
   line-height: calc( var(--base-measurement) * 10);
 }
 
 .sandbox .box2 {
   background: var(--secondary-color);
+  transform: scaleY(0.7);
 }

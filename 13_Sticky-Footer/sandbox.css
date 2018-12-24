@@ -1,0 +1,27 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+html, body {
+  height: 100%;
+}
+
+/* NOTE: We can do this by giving fixed height to footer which is not recommended */
+.sticky-footer-lesson {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+
+/*
+  NOTE: This is optional as page-content occupies
+  entire space and leaves enough for footer
+*/
+footer {
+  /* flex-shrink: 0; */
+}
