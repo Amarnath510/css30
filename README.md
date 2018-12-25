@@ -22,7 +22,7 @@ https://codecollege.ca
 - [x] Day-13: Sticky Footer
 - [x] Day-14: Sticky Header
 - [x] Day-15: Sticky Sidebar
-- [ ] Day-16:
+- [x] Day-16: Modal Window
 - [ ] Day-17:
 - [ ] Day-18:
 - [ ] Day-19:

@@ -1,0 +1,70 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+/*
+  First create a div(with class overlay) if not present.
+  Hide it .. using opacity 0.
+  Add css the way you want it to be displayed.
+*/
+.overlay {
+  position: fixed;
+  opacity: 0;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  /* width: 100%; */ /* NOT NECESSARY */
+  /* height: 100%; */
+  pointer-events: none; /* Not necessary. Since this overlay is hidden make sure we don't have access to it. */
+  -webkit-transform: scale(0.5); /* Scale it to half as we don't want to occupy entire screen */
+          transform: scale(0.5);
+}
+
+input[type="checkbox"]:checked ~ .overlay {
+  pointer-events: auto;
+  opacity: 0.9;
+  -webkit-transform: scale(1); /* Scale it to full */
+          transform: scale(1);
+  -webkit-transition: transform 0.5s ease,
+                      opacity 0.5s ease;
+          transition: transform 0.5s ease,
+                              opacity 0.5s ease;
+}
+
+/*
+  Same as above
+  Hide it using opacity
+*/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  width: 100%;
+  max-width: 640px;
+}
+
+input[type="checkbox"]:checked ~ .modal {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 100;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: 0.1s;
+}
+
+.modal__content {
+  display: block;
+  background: #e7eef1;
+  padding: 2rem;
+}
