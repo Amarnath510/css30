@@ -1,0 +1,184 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.path {
+  position: relative;
+  background: #333;
+  padding: 3rem;
+  box-sizing: border-box;
+  overflow: hidden; /* When pacman goes out of the box then it should be hidden */
+  width: 100%;
+}
+
+.path::after {
+  content: "";
+  position: absolute; /* This is with respect to parent element so make parent relative */
+  display: block;
+  border-top: 12px dotted #FFFFFF;
+  width: 90%;
+  left: 5%; /* Total width is 90% so left is 5% which implicitly makes right 5% */
+  top: 50%; /* This ALONE does not center the dots vertically. We need margin-top */
+  margin-top: -6px; /* Since dot size is 12px move it above by 6px to center it */
+}
+
+.pacman {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  /* Animate */
+  animation: moveForward 5s linear infinite;
+  /* Pacman should not start immediately. Only after ghost starts moving we have to start packman */
+  animation-delay: 1s;
+  left: -20%;
+}
+
+.pacman::before, .pacman::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 0;
+  border: 30px solid yellow;
+  border-radius: 50%;
+  margin-top: -30px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+
+  /* Animate */
+  animation: mouthTop 0.7s ease infinite;
+}
+
+.pacman::after {
+  /* margin-left: 65px; */
+  border-color: yellow;
+  border-right-color: transparent;
+  border-top-color: transparent;
+
+  /* Animate */
+  animation: mouthBottom 0.7s ease infinite;
+}
+
+.ghost {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 20%; /* Away from pacman */
+  height: 70px;
+  width: 60px;
+  margin-top: -35px;
+  background: red;
+
+  /* Shape the goast */
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+
+  /* Movement */
+  animation: moveForward 5s linear infinite,
+             blink 1s linear infinite;
+}
+
+.ghost::before, .ghost::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 20px;
+  background-color: #FFF;
+  border-radius: 100%;
+  top: 15px;
+  left: 5px;
+}
+
+.ghost::after {
+  left: 30px;
+}
+
+.eyes::before, .eyes::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: blue;
+  border-radius: 50%;
+  top: 25px;
+  left: 10px;
+  z-index: 99;
+  animation: peeperLeft 0.7s linear infinite;
+}
+
+.eyes::after {
+  left: 35px;
+  animation: peeperRight 0.7s linear infinite;
+}
+
+.skirt, .skirt::before, .skirt::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 10px #333;
+  border-top-color: transparent;
+
+  /* Postion it at bottom */
+  bottom: -10px;
+}
+
+.skirt::before {
+  content: "";
+  left: 10px;
+}
+
+.skirt::after {
+  content: "";
+  left: 30px;
+}
+
+@keyframes moveForward {
+  0% {
+    left: -20%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes mouthTop {
+  50% {
+    transform: rotate(44deg);
+  }
+}
+
+@keyframes mouthBottom {
+  50% {
+    transform: rotate(-44deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    background: hotpink;
+  }
+}
+
+@keyframes peeperLeft {
+  0%, 100% {
+    left: 5px;
+  }
+
+  50% {
+    left: 15px;
+  }
+}
+
+@keyframes peeperRight {
+  0%, 100% {
+    left: 30px;
+  }
+
+  50% {
+    left: 40px;
+  }
+}
