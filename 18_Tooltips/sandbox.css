@@ -1,0 +1,124 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.tooltip {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  background: #f2395a;
+  color: #FFF;
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+.tooltip::before {
+  content: attr(title);
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
+  width: 200px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  z-index: 2;
+  display: none;
+  color: white;
+  line-height: 1.4;
+
+
+  /* Positioning - We will move this code out so we can place tooltips according to top/bottom/left/right */
+  /* bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  display: none;
+
+  /* Positioning - We will move this code out so we can place tooltips according to top/bottom/left/right */
+  /* bottom: 100%;
+  left: 50%;
+  transform: translateY(50%); */
+}
+
+/* Do something on tooltip hover's before element */
+.tooltip:hover::before,
+.tooltip:hover::after {
+  display: inline-block;
+}
+
+/*
+  Top Tooltip position
+  "bottom: 100%" to place it at that position
+  "left: 50%" to adjust horizontally
+  Then if it is still not at the correct position then use "transform" property
+  "postition: absolute" && "top/right/bottom/left" will move pixel by pixel so the rendering is not smooth(it goes pixel-by-pixel, so the rendering is not smooth).
+  But when we use "transform" then the rendering is SMOOTH.
+*/
+.tooltip.top::before {
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.top::after {
+  border-top-color: rgba(0, 0, 0, 0.8);
+  bottom: 100%;
+  left: 50%;
+  transform: translateY(50%);
+}
+
+/* Right Tooltip position */
+.tooltip.right::before {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translateY(-50%);
+}
+
+.tooltip.right::after {
+  border-right-color: rgba(0, 0, 0, 0.8);
+  border-left-style: none;
+  top: 50%;
+  left: 100%;
+}
+
+
+/* Bottom Tooltip position */
+.tooltip.bottom::before {
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom::after {
+  top: 100%;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  border-top-style: none;
+  left: 50%;
+}
+
+/* Left Tooltip position */
+.tooltip.left::before {
+  right: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip.left::after {
+  right: 100%;
+  border-left-color: rgba(0, 0, 0, 0.8);
+  border-right-style: none;
+  top: 50%;
+  transform: translateY(-50%);
+}

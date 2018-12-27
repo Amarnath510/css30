@@ -24,7 +24,7 @@ https://codecollege.ca
 - [x] Day-15: Sticky Sidebar
 - [x] Day-16: Modal Window
 - [x] Day-17: Packman
-- [ ] Day-18:
+- [x] Day-18: Tooltips
 - [ ] Day-19:
 - [ ] Day-20:
 - [ ] Day-21:
